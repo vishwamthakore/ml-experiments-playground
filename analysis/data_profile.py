@@ -7,6 +7,7 @@ def profile_dataset(df: pd.DataFrame, target_col: str):
     info["n_rows"] = df.shape[0]
     info["n_columns"] = df.shape[1]
     info["columns"] = list(df.columns)
+    info["target_column_name"] = target_col
 
     # ---------------- datatypes ----------------
     info["dtypes"] = df.dtypes.astype(str)
