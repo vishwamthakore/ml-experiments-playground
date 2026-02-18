@@ -1,11 +1,13 @@
 import pandas as pd
 from data.base import BaseDataset
-from data.sklearn_datasets import Iris, Wine
+from data.sklearn_datasets import Iris, Wine, BrestCancer, Digits
 import streamlit as st
 
 DATA_REGISTRY = {
     "iris": Iris,
-    "wine": Wine
+    "wine": Wine,
+    "brest cancer": BrestCancer,
+    "digits": Digits
 }
 
 @st.cache_data
