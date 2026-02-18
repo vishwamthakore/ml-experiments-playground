@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from pydantic import BaseModel
 
 def display_feature_form(df, profile):
 
