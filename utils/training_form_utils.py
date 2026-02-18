@@ -34,7 +34,7 @@ def display_parameters_form(model_name: str):
         params["min_samples_split"] = min_samples_split
 
     elif "Random Forest" in model_name:
-        n_estimators = st.slider("Number of Trees", 10, 500, 100)
+        n_estimators = st.slider("Number of Trees", 5, 100, 20)
         max_depth = st.slider("Max Depth", 1, 30, 10)
         params["n_estimators"] = n_estimators
         params["max_depth"] = max_depth

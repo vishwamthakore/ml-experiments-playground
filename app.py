@@ -25,7 +25,7 @@ load_btn = st.sidebar.button(label="Load dataset")
 
 # load dataset only on click
 if load_btn:
-    st.session_state.dataset = load_dataset(dataset_name).load()
+    st.session_state.dataset = load_dataset(dataset_name)
     st.session_state.dataset_name = dataset_name
     
     # calculate profile only when loading dataset

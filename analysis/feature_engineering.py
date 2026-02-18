@@ -1,13 +1,26 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
+import sklearn
+
+
+def get_one_hot_encoder():
+    version = tuple(map(int, sklearn.__version__.split(".")[:2]))
+    if version >= (1, 2):
+        one_hot_encoder = OneHotEncoder(handle_unknown="ignore", sparse_output=False)
+    else:
+        one_hot_encoder = OneHotEncoder(handle_unknown="ignore", sparse=False)
+    return one_hot_encoder
+
 
 class FeatureEngineer:
-    def __init__(self,
-                numeric_cols,
-                categorical_cols,
-                num_transform="None",
-                cat_transform="OneHotEncoder"):
+    def __init__(
+        self,
+        numeric_cols,
+        categorical_cols,
+        num_transform="None",
+        cat_transform="OneHotEncoder",
+    ):
 
         self.numeric_cols = numeric_cols
         self.categorical_cols = categorical_cols
@@ -31,10 +44,7 @@ class FeatureEngineer:
 
         # ----- categorical -----
         if self.cat_transform == "OneHotEncoder":
-            self.cat_encoder = OneHotEncoder(
-                handle_unknown="ignore",
-                sparse_output=False
-            )
+            self.cat_encoder = get_one_hot_encoder()
             self.cat_encoder.fit(df[self.categorical_cols])
 
         elif self.cat_transform == "OrdinalEncoder":
