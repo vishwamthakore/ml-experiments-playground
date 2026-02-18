@@ -4,6 +4,8 @@ from data.data_registry import get_datasets, load_dataset
 from analysis.data_profile import profile_dataset
 from utils import app_utils, variable_utils
 
+st.set_page_config(layout="wide")
+
 # initiaize state variables
 if "dataset" not in st.session_state:
     st.session_state.dataset = None
