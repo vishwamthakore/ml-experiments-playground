@@ -6,17 +6,20 @@ from utils import app_utils, variable_utils
 
 # st.set_page_config(layout="wide")
 
+st.set_page_config(
+    page_title="ML Playground",
+    page_icon="🧠",
+    # layout="wide",
+    initial_sidebar_state="expanded",
+)
+
+st.markdown("## 🧠 ML Experiments Playground")
+
 # initiaize state variables
 if "dataset" not in st.session_state:
     st.session_state.dataset = None
     st.session_state.dataset_name = None
     st.session_state.profile = None
-
-st.markdown("## ML Experiments Playground")    
-if st.session_state.dataset is None:
-    st.info("Load a dataset from the sidebar to begin.")
-else:
-    st.success(f"Loaded dataset : {st.session_state.dataset_name}")
 
 
 dataset_name = st.sidebar.selectbox(
@@ -29,7 +32,7 @@ load_btn = st.sidebar.button(label="Load dataset")
 if load_btn:
     st.session_state.dataset = load_dataset(dataset_name)
     st.session_state.dataset_name = dataset_name
-    
+
     # calculate profile only when loading dataset
     df = st.session_state.dataset
     target_column_name = df.columns[-1]
@@ -41,3 +44,16 @@ if load_btn:
     variable_utils.delete_model_state_variables()
 
     st.success(f"Loaded dataset successfully : {st.session_state.dataset_name}")
+
+
+# Display data
+if st.session_state.dataset is None:
+    st.info("Load a dataset from the sidebar to begin.")
+else:
+    df = st.session_state.dataset
+    st.success(
+        f"Loaded dataset {st.session_state.dataset_name}. Rows: {df.shape[0]}, Columns: {df.shape[1]}"
+    )
+
+# Display instructions
+app_utils.display_instructions()

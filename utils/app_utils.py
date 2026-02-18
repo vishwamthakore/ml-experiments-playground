@@ -79,3 +79,119 @@ def display_visualizations(df, profile):
             title="Feature Relationship by Class"
         )
         st.plotly_chart(fig, use_container_width=True)
+
+
+def display_instructions():
+
+    st.markdown(
+    """
+    ### Welcome 👋
+
+    This application is an interactive machine learning lab.
+    You can load a dataset, explore it, prepare features, train models, and evaluate results — all step by step.
+
+    You do **not** need to write code. Just follow the pages from left to right.
+
+    ---
+
+    ### How to Use the App
+
+    ##### Step 1 — Load a Dataset (You are here)
+
+    * Use the **sidebar on the left**
+    * Choose a dataset
+    * Click **Load Dataset**
+
+    After loading, the dataset size will appear at the top of the page.
+
+    ---
+
+    ##### Step 2 — Data Explorer
+
+    Open **Data Explorer** from the sidebar.
+
+    Here you can understand the dataset:
+
+    * View rows and columns
+    * See the target variable
+    * Check class balance
+    * View feature distributions
+    * View correlation heatmap
+
+    Purpose:
+    Before training any model, you should first understand your data.
+
+    ---
+
+    ##### Step 3 — Feature Engineering
+
+    Go to **Feature Engineering**.
+
+    Here you will:
+
+    * Select which columns to use
+    * Choose transformations
+
+    * Scale numeric columns
+    * Encode categorical columns
+    * Split data into train and test sets
+
+    Then click **Apply Transformations**.
+
+    Purpose:
+    Models cannot learn directly from raw data.
+    We prepare the data so models can understand it.
+
+    ---
+
+    ##### Step 4 — Model Training
+
+    Open **Model Training**.
+
+    You can:
+
+    * Select a machine learning model
+    * Adjust a few hyperparameters
+    * Click **Train Model**
+
+    The app will automatically:
+
+    * Train the model
+    * Make predictions
+    * Evaluate performance
+
+    ---
+
+    ##### Step 5 — Evaluation
+
+    After training you will see:
+
+    For classification:
+
+    * Accuracy
+    * Precision / Recall / F1
+    * Confusion Matrix
+
+    For regression:
+
+    * R² score
+    * Error metrics
+    * Actual vs Predicted plot
+
+    Purpose:
+    This tells you how good your model really is.
+
+    ---
+
+    ### Recommended Workflow
+
+    Always follow this order:
+
+    **Load Dataset → Explore → Feature Engineering → Train → Evaluate**
+
+    If you change dataset or feature settings, you should retrain the model.
+
+    ---
+
+    You can experiment safely — nothing you do will break the data."""
+    )
