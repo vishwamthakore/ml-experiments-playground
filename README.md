@@ -105,13 +105,6 @@ For example, if user uploads/selects a new dataset the feature engineering varia
     - One transformation option for all numerical columns
     - One transformation option for all categorical columns
 
-## 🛠️ Tech Stack
-
-- Pythony
-- Streamlit
-- Pandas
-- Scikit-learn
-- Plotl
 
 ## 🧪 How to Run Locally
 
@@ -120,6 +113,17 @@ git clone <your-repo-url>
 cd ml-experiments-playground
 pip install -r requirements.txt
 streamlit run app.py
+```
+
+
+## 🛠️ Tech Stack
+
+- Pythony
+- Streamlit
+- Pandas
+- Scikit-learn
+- Plotl
+
 
 ## 🎯 Future Improvements
 
