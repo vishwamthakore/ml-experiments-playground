@@ -118,7 +118,7 @@ streamlit run app.py
 
 ## 🛠️ Tech Stack
 
-- Pythony
+- Python
 - Streamlit
 - Pandas
 - Scikit-learn
