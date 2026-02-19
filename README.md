@@ -4,14 +4,13 @@ An interactive Streamlit application for exploring datasets, applying feature en
 
 Built as a hands-on experimentation layer for structured ML workflows.
 
----
-
 ## 🚀 Live Demo
 
-Deployed on Streamlit Community Cloud  
-👉 *[ML Experiments Playground](https://fvzycrudy4iq8gzgt944lj.streamlit.app/)*
+Deployed on Streamlit Community Cloud
 
----
+> [!TIP]
+> [ML Experiments Playground](https://fvzycrudy4iq8gzgt944lj.streamlit.app/)
+
 
 ## 📌 Project Overview
 
@@ -26,7 +25,7 @@ The goal of this project is to create a clean, organized, and extensible ML expe
 
 ---
 
-# 🚀 Usage Flow (User Perspective)
+## 🚀 Usage Flow (User Perspective)
 
 ### 1️⃣ Load Dataset
 - Select a built-in dataset (e.g., Iris)
@@ -60,11 +59,9 @@ The goal of this project is to create a clean, organized, and extensible ML expe
 
 ---
 
----
+## 🧠 Developer Notes
 
-# 🧠 Developer Notes
-
-## State Management
+### State Management
 
 The app uses Streamlit's `st.session_state` to manage:
 
@@ -91,30 +88,30 @@ st.session_state["model_config"]
 st.session_state["model"]
 st.session_state["y_pred"]
 ```
+
 The variables of the next step must be deleted, if there are any changes in the previous step.
 For example, if user uploads/selects a new dataset the feature engineering variables and training variables should be deleted.
 
-## Design Decisions
+### Design Decisions
 
-🔹 Multi-Page Architecture
+🔹  Multi-Page Architecture
 
-Instead of a single-page application, the app is structured using Streamlit’s multipage system for:
+    Instead of a single-page application, the app is structured using Streamlit’s multipage system for:
 
-- Clean separation of concerns
-- Better scalability
-- Improved code organization
+    - Clean separation of concerns
+    - Better scalability
+    - Improved code organization
 
 🔹 Sidebar Handling
-
-Each page shares the same sidebar logic via reusable functions to ensure consistent state across pages.
+    Each page shares the same sidebar logic via reusable functions to ensure consistent state across pages.
 
 🔹 Simplified Transformations
 
-To avoid cluttered UI:
-- One transformation option for all numerical columns
-- One transformation option for all categorical columns
+    To avoid cluttered UI:
+    - One transformation option for all numerical columns
+    - One transformation option for all categorical columns
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 - Pythony
 - Streamlit
@@ -122,7 +119,7 @@ To avoid cluttered UI:
 - Scikit-learn
 - Plotl
 
-🎯 Future Improvements
+## 🎯 Future Improvements
 
 - CSV upload support
 - Experiment tracking history
@@ -130,19 +127,15 @@ To avoid cluttered UI:
 - Download trained models
 - Feature importance visualization
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 Python
-
 Streamlit
-
 Pandas
-
 Scikit-learn
-
 Matplotlib / Seaborn
 
-🎯 Future Improvements
+## 🎯 Future Improvements
 
 - CSV upload support
 - Experiment tracking history
