@@ -88,22 +88,22 @@ For example, if user uploads/selects a new dataset the feature engineering varia
 
 ### Design Decisions
 
-🔹  Multi-Page Architecture
+🔹  ##### Multi-Page Architecture
 
-    Instead of a single-page application, the app is structured using Streamlit’s multipage system for:
+Instead of a single-page application, the app is structured using Streamlit’s multipage system for:
 
-    - Clean separation of concerns
-    - Better scalability
-    - Improved code organization
+- Clean separation of concerns
+- Better scalability
+- Improved code organization
 
-🔹 Sidebar Handling
-    Each page shares the same sidebar logic via reusable functions to ensure consistent state across pages.
+🔹 ##### Sidebar Handling
+Each page shares the same sidebar logic via reusable functions to ensure consistent state across pages.
 
-🔹 Simplified Transformations
+🔹 ##### Simplified Transformations
 
-    To avoid cluttered UI:
-    - One transformation option for all numerical columns
-    - One transformation option for all categorical columns
+To avoid cluttered UI:
+- One transformation option for all numerical columns
+- One transformation option for all categorical columns
 
 
 ## 🧪 How to Run Locally
