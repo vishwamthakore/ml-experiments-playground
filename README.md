@@ -4,12 +4,8 @@ An interactive Streamlit application for exploring datasets, applying feature en
 
 Built as a hands-on experimentation layer for structured ML workflows.
 
-## 🚀 Live Demo
-
-Deployed on Streamlit Community Cloud
-
-> [!TIP]
-> [ML Experiments Playground](https://fvzycrudy4iq8gzgt944lj.streamlit.app/)
+> ## 🚀 Live Application
+> [▶ Open ML Experiments Playground](https://fvzycrudy4iq8gzgt944lj.streamlit.app/)
 
 
 ## 📌 Project Overview
