@@ -4,8 +4,8 @@ An interactive Streamlit application for exploring datasets, applying feature en
 
 Built as a hands-on experimentation layer for structured ML workflows.
 
-> ## 🚀 Live Application
-> [▶ Open ML Experiments Playground](https://fvzycrudy4iq8gzgt944lj.streamlit.app/)
+## 🚀 Live Application
+[▶ Open ML Experiments Playground](https://fvzycrudy4iq8gzgt944lj.streamlit.app/)
 
 
 ## 📌 Project Overview
@@ -19,7 +19,6 @@ ML Experiments Playground allows you to:
 
 The goal of this project is to create a clean, organized, and extensible ML experimentation environment while learning proper project structuring and state management in Streamlit.
 
----
 
 ## 🚀 Usage Flow (User Perspective)
 
@@ -53,7 +52,6 @@ The goal of this project is to create a clean, organized, and extensible ML expe
 - Train model
 - View performance metrics
 
----
 
 ## 🧠 Developer Notes
 
@@ -114,6 +112,14 @@ For example, if user uploads/selects a new dataset the feature engineering varia
 - Pandas
 - Scikit-learn
 - Plotl
+
+## 🧪 How to Run Locally
+
+```bash
+git clone <your-repo-url>
+cd ml-experiments-playground
+pip install -r requirements.txt
+streamlit run app.py
 
 ## 🎯 Future Improvements
 
